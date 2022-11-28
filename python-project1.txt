@@ -1,0 +1,31 @@
+print("\t\t\t\tWelcome to the Game\n\n")
+name=input("Enter your name:")
+print("Hello ",name)
+
+def funm():
+    import random
+    random_num=random.randint(1,10)
+    tries=1
+    q=input("Would you like to play a game?(yes/no)")
+    if(q=="yes"):
+        print("I'm thinking of a random number between 1 to 10.")
+        guess=int(input("Have a guess:"))
+        if(guess>random_num):
+            print("Guess Lower")
+        elif(guess<random_num):
+            print("Guess Higher")
+        while(guess!=random_num):
+            tries+=1
+            guess=int(input("Try Again:"))
+            if(guess<random_num):
+                print("Guess Higher")
+        if(guess==random_num):
+            print("You are right! YOU WON THE GAME. The number was",random_num,"and took",tries,"tries!")
+    elif(q=="no"):
+        print("Okay, Thank you for visiting.")
+    else:
+        print("Wrong Input.")
+        funm()
+
+funm()
+        

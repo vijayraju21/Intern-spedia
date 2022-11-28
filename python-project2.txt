@@ -1,0 +1,40 @@
+print("\t\t\t\tWelcome to the Game\n\n\nYou are standing outside of your house and you see a person running towards you and asking for shelter.")
+print("Will you provide shelter?(yes/no)")
+
+def fun1():
+    b=input()
+    if(b=="yes"):
+        print("You are an honest person.Congrats!, he was a thief and you WON THE GAME.")
+    elif(b=="no"):
+        print("You helped a thief. Now, you have to go to jail. GAME OVER.")
+    else:
+        print("Wrong Input.")
+        print("Please Select yes/no")
+        fun1()
+
+def fun2():
+    c=input()
+    if(c=="yes"):
+        print("Congrats!, he was a thief and you helped the police to catch him. You WON THE GAME.")
+    elif(c=="no"):
+        print("Sorry!, you are dead. He was a thief and killed you. GAME OVER.")
+    else:
+        print("Wrong Input.")
+        print("Please Select yes/no")
+        fun2()
+
+def funm():
+    a=input()        
+    if(a=="yes"):
+        print("Police came to your home, and ask you that whether you have provided shelter for thief.")
+        print("Will you say(yes/no)")
+        fun1()
+    elif(a=="no"):
+        print("Now, he is trying to kill you. Will you knock him down?(yes/no)")
+        fun2()
+    else:
+        print("Wrong Input.")
+        print("Please Select yes/no")
+        funm()
+
+funm()
